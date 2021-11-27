@@ -1,13 +1,13 @@
 {
+  "homepage": "http://umairny.github.io/mypf/",
   "name": "myportfolio",
   "version": "0.0.0",
-  "homepage": "http://umairny.github.io/mypf",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy" : "gh-pages -d build",
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "predeploy": "npm run build",
-    "deploy" : "gh-pages -d build"
+    "serve": "vite preview"
   },
   "dependencies": {
     "react": "^17.0.0",

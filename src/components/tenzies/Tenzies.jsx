@@ -171,7 +171,7 @@ export default function Tenzies() {
     }
 
     return (
-        <main>
+        <main className="tenzies">
             {tenzies && <Confetti />}
             <h1 className="title">Tenzies</h1>
             <p className="instructions">Roll until all dice are the same. 

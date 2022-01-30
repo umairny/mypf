@@ -1,4 +1,6 @@
 * {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
   }
   
@@ -8,7 +10,12 @@
     padding: 20px;
     font-family: 'Karla', sans-serif;
   }
-  
+  h4 {
+    margin: 5px;
+  }
+  p{
+    margin: 5px;
+  }
   main {
     background-color: #F5F5F5;
     margin: 0 auto;

@@ -129,13 +129,15 @@ export default function Tenzies() {
     ))
 
     //format time H : M : S
-    const formatTime = () => {
-        const getSeconds = `0${(timer % 60)}`.slice(-2)
-        const minutes = `${Math.floor(timer / 60)}`
+    const formatTime = (x) => {
+        const getSeconds = `0${(x % 60)}`.slice(-2)
+        const minutes = `${Math.floor(x / 60)}`
         const getMinutes = `0${minutes % 60}`.slice(-2)
-        const getHours = `0${Math.floor(timer / 3600)}`.slice(-2)
+        const getHours = `0${Math.floor(x / 3600)}`.slice(-2)
     
-        return `${getHours} : ${getMinutes} : ${getSeconds}`
+        //Full Houre min sec return `${getHours} : ${getMinutes} : ${getSeconds}`
+        //min and sec only
+        return `min ${getMinutes} : ${getSeconds} sec`
     }
 
     //input change handle
@@ -175,16 +177,16 @@ export default function Tenzies() {
             <p className="instructions">Roll until all dice are the same. 
             Click each die to freeze it at its current value between rolls.</p>
             
-            <p>Best Score: <br />
-            By <strong>{bestUser ? bestUser : ""}</strong> {clicks ? best.clicks : "0"} clicks, in {duration ? best.totalTime : "0"} seconds</p>
+            <p>Best score by :  <strong style={{color:'red'}}>{bestUser ? bestUser : ""}</strong>  <br />
+            {clicks ? best.clicks : "0"} clicks in {duration ? (formatTime(best.totalTime)) : "0"}</p>
             
             <h4>Total clicks {count}
                 <span style={{backgroundColor:'#5035FF',
                 color:'white', borderRadius:'5px', padding:'5px', margin:'5px'}}>
-                    in {tenzies && clearInterval(increment.current)}{formatTime()} time </span>
+                    in {tenzies && clearInterval(increment.current)}{formatTime(timer)}</span>
             </h4>
             
-            <h4>Good Luck {best.user && best.user}</h4>
+            <h4>Good Luck! <span style={{color:'red'}}> <em> {best.user && best.user} </em> </span></h4>
             
             <div className="dice-container">
                 {(count > 0 && !tenzies) && diceElements}

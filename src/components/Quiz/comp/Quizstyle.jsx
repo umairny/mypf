@@ -89,7 +89,7 @@ export default function QuizStyle (props) {
                         <hr />
                     </div>
                 ))}
-                {results ? <button className='subBut'>Try dagain</button> : <button className='subBut'>Submit</button>}
+                {results ? <button className='subBut'>Try again</button> : <button className='subBut'>Submit</button>}
             </form>
 
             {results && <div className='score'>Score is {count}/{props.total} and {(count/props.total)*100}%</div>}

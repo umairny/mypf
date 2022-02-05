@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import QuizStyle from "./QuizStyle"
+import QuizStyle from "./Quizstyle"
 import ShowError from "./ShowError"
 import Loading from "./Loading"
 import { nanoid } from "nanoid"

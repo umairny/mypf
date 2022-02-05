@@ -47,7 +47,7 @@ export default function QuizStyle (props) {
         event.preventDefault()
         setResults(false)
         setFormData([])
-        {props.start === false}
+        {props.start = false}
     }
 
     return(

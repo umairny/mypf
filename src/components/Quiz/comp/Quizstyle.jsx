@@ -44,10 +44,11 @@ export default function QuizStyle (props) {
     }
 
     function tryagain (event){
-        event.preventDefault()
+        event.preventDefault(
+            location.reload()
+        )
         setResults(false)
         setFormData([])
-        {props.start = false}
     }
 
     return(

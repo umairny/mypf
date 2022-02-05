@@ -1,11 +1,10 @@
-
 h4 {
     margin: 5px;
   }
   p{
     margin: 5px;
   }
-  main {
+  .tenzies {
     background-color: #F5F5F5;
     margin: 25px auto;
     max-width: 800px;
@@ -18,7 +17,7 @@ h4 {
     text-align: center;
   }
   
-  .title {
+  .tenTitle {
     font-size: 40px;
     margin: 0;
   }
@@ -68,8 +67,7 @@ h4 {
   }
   
   .roll-dice {
-    height: 50px;
-    width: 150px;
+    padding: 10px 20px;
     border: none;
     border-radius: 6px;
     background-color: #5035FF;

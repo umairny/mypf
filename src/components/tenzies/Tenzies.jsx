@@ -160,6 +160,16 @@ export default function Tenzies() {
             rollDice()
         }
     }
+    //Handle Clear Reset
+    function clear() {
+        setBest({
+            clicks: 0,
+            totalTime: 0,
+            user: ""
+        })
+        localStorage.clear()
+    }
+
 
     let btnText
     if (tenzies) {
@@ -173,7 +183,7 @@ export default function Tenzies() {
     return (
         <main className="tenzies">
             {tenzies && <Confetti />}
-            <h1 className="title">Tenzies</h1>
+            <h1 className="tenTitle">Tenzies</h1>
             <p className="instructions">Roll until all dice are the same. 
             Click each die to freeze it at its current value between rolls.</p>
             
@@ -206,6 +216,7 @@ export default function Tenzies() {
             <button className="roll-dice" onClick={handleSubmit}>
                     {btnText}
             </button>
+            <button className="roll-dice" style={{backgroundColor: 'red', margin: '10px'}} onClick={clear}>Reset</button>
             </div>
             :
             <div>

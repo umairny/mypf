@@ -2,10 +2,26 @@ import { Link } from 'react-router-dom'
 
 export default function Header () {
     return(
-        <div className="header">
-            <Link className="link" to="/mypf/">Home</Link>
-            <Link className="link" to="/mypf/tenzies">Tenzies Game</Link>
-        </div>
+    <header>
+		<nav>
+			<ul>
+				<li>
+					<Link to="/mypf/">Home</Link>
+				</li>
+				<li>
+					<Link to="/mypf/quiz">Quizlet</Link>
+				</li>
+				<li>
+					<Link to="/mypf/tenzies">Tenzies</Link>
+				</li>
+				<li>
+					<Link to="/mypf/notes">Notes</Link>
+				</li>
+			</ul>
+		</nav>
+	</header>
+
+
     )
 }
 

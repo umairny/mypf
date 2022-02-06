@@ -1,21 +1,19 @@
-import { Link } from 'react-router-dom'
-
 export default function Header () {
     return(
     <header>
 		<nav>
 			<ul>
 				<li>
-					<Link to="/mypf/">Home</Link>
+					<a href="/mypf/">Home</a>
 				</li>
 				<li>
-					<Link to="/mypf/quiz">Quizlet</Link>
+					<a href="/mypf/quiz">Quizlet</a>
 				</li>
 				<li>
-					<Link to="/mypf/tenzies">Tenzies</Link>
+					<a href="/mypf/tenzies">Tenzies</a>
 				</li>
 				<li>
-					<Link to="/mypf/notes">Notes</Link>
+					<a href="/mypf/notes">Notes</a>
 				</li>
 			</ul>
 		</nav>
